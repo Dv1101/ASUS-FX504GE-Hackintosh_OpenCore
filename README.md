@@ -1,5 +1,4 @@
-# Hackintosh Guide for **Asus FX504GE**
-> Archived because I bought a MacBook Air M1 2020
+# Hackintosh Guide for **Asus FX504GE/ FX504GD**
 
 **This guide it's updated to OpenCore 0.9.7 and tested on my main device with macOS High Sierra, Mojave, Catalina, Big Sur, Monterrey, Ventura and Sonoma.**
 
@@ -18,30 +17,31 @@
 </br>
 <!-- END shields -->
 
-![Asus FX504GE running macOS Big Sur](/Docs/Images/Asus-FX504-macOS.png)
+![Asus FX504GE/ FX504GD running macOS Big Sur](/Docs/Images/Asus-FX504-macOS.png)
 
 # Specifications
 Here's the [Amazon Link](https://www.amazon.es/dp/B07D4W2CY6/ref=cm_sw_em_r_mt_dp_gUF8FbYQW48NV) for this exact model, *it cost me `1.199€` when purchased on 18/09/2018*
 
 | Component | Name |
 |:--- |:---|
-| Motherboard:  | FX504GE **HM370** |
-| CPU: | **Intel** i7-8750H |
+| Motherboard:  | FX504GE/GD **HM370** |
+| CPU: | FX504GE : **Intel** i7-8750H, FX504GD : **Intel** i7-8300H |
 | RAM: | **SK Hyinix** HMA82GS6CJR8N-VK 16GB 2666Mhz |
 | iGPU: | **Intel** UHD 630 (Mobile) |
-| dGPU: | **nVidia** GeForce GTX 1050 Ti (DISABLED) |
+| dGPU: | FX504GE : **nVidia** GeForce GTX 1050 Ti (Include SSDT-dGPU & flag in iGpu to DISABLE), FX504GD : **nVidia** GeForce GTX 1050 Ti (Include SSDT-dGPU & flag in iGpu to DISABLE) |
 | NVMe: | **Samsung** 970 EVO Plus |
 | HDD: | **HGST** HTS721010A9E630 |
 | Wifi/BT: | **Intel** Wireless-AC 9560 160MHz (Type CNVi) |
 | Audio: | **RealTek** ALC255 |
 | Ethernet: | **RealTek** RTL8111 |
 | Trackpad: | **ELAN1200** Precision TouchPad (Type HID) |
-| Keyboard: | PS/2 Keyboard (ISO Spain)|
+| Keyboard: | PS/2 Keyboard (ISO US)|
 ><strong>Note:</strong> The NVMe is the only component that has been replaced from STOCK
 
 # Working Status
  - ### **Fully Working**
     - Built-In Display
+    - WiFi
     - [All USB Ports](/Docs/Images/Guide/Asus-FX504GE-layout.png)
     - Jack 3.5mm, Speakers & Microphone
     - DC-IN & Battery
@@ -52,13 +52,12 @@ Here's the [Amazon Link](https://www.amazon.es/dp/B07D4W2CY6/ref=cm_sw_em_r_mt_d
     - Trackpad
 
  - ### **Partially Working**
-    - WiFi
     - Bluetooth
     - HDMI Port
     - Continuity Features (Apple Ecosystem Fancy Things)
 
 - ### **Not Working**
-    - dGPU *(nVidia GTX 1050Ti)*
+    - dGPU *(nVidia GTX 1050Ti/ 1050)*
 
 <details open>
     <summary><h3>&nbsp;&nbsp;🔍&nbsp;&nbsp;In-depth Info</h3></summary>
